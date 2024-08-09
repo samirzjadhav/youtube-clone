@@ -1,5 +1,6 @@
 import React from "react";
 import { AppContext } from "./context/contextApi";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Feed from "./components/Feed";
@@ -14,7 +15,19 @@ import VideoDetails from "./components/VideoDetails";
 export default function App() {
   return (
     <AppContext>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <BrowserRouter>
+        <div className="flex flex-col h-full">
+          <Header />
+          <Routes>
+            <Route path="/" exact element={<Feed />} />
+            <Route
+              path="/searchResult/:searchQuery"
+              element={<SearchResult />}
+            />
+            <Route path="/video/:id" element={<VideoDetails />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
     </AppContext>
   );
 }

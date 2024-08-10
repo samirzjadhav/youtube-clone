@@ -1,9 +1,11 @@
 import React from "react";
+import { Context } from "../context/contextApi";
+import LeftNav from "./LeftNav";
 
 const Feed = () => {
   return (
-    <div>
-      <h1>Feed</h1>
+    <div className="flex flex-row h-[calc(100%-56px)]">
+      <LeftNav />
     </div>
   );
 };

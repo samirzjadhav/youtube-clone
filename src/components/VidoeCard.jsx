@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const VidoeCard = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div className="text-white">video card </div>;
+};
 
-export default VidoeCard
+export default VidoeCard;

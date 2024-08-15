@@ -9,6 +9,7 @@ import { abbreviateNumber } from "js-abbreviation-number";
 import { fetchDataFromApi } from "../utils/api";
 import { Context } from "../context/contextApi";
 import SuggestionVideoCard from "./SuggestionVideoCard";
+import VideoLength from "../shared/VideoLength";
 
 const VidoeCard = ({ video }) => {
   return (
@@ -21,6 +22,7 @@ const VidoeCard = ({ video }) => {
               className="h-full w-full object-cover"
               alt=""
             />
+            {video?.lengthSeconds && <VideoLength time={video?.videoSeconds} />}
           </div>
         </div>
       </Link>

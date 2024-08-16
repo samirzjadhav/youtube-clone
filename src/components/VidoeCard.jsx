@@ -24,6 +24,17 @@ const VidoeCard = ({ video }) => {
             />
             {video?.lengthSeconds && <VideoLength time={video?.videoSeconds} />}
           </div>
+          <div className="flex text-white mt-3">
+            <div className="flex items-start">
+              <div className="flex h-9 w-9 rounded-full overflow-hidden">
+                <img
+                  src={video?.author?.avator[0]?.url}
+                  className="h-full w-full object-cover"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </Link>
     </>

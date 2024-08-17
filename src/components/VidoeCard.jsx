@@ -34,6 +34,17 @@ const VidoeCard = ({ video }) => {
                 />
               </div>
             </div>
+            <div className="flex flex-col ml-3 overflow-hidden">
+              <div className="text-sm font-bold line-clamp-2">
+                {video?.title}
+              </div>
+              <span className="text-[12px] font-semibold mt-2 text-white/[0.7] flex items-center">
+                {video?.author?.title}
+                {video?.author?.badges[0]?.type === "VERIFIED_CHANNEL" && (
+                  <BsFillCheckCircleFill className="text-white/[0.5] text-[12px] ml-1" />
+                )}
+              </span>
+            </div>
           </div>
         </div>
       </Link>

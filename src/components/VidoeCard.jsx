@@ -22,9 +22,8 @@ const VidoeCard = ({ video }) => {
             <div className="flex items-start">
               <div className="flex h-9 w-9 rounded-full overflow-hidden">
                 <img
-                  src={video?.author?.avator[0]?.url}
                   className="h-full w-full object-cover"
-                  alt=""
+                  src={video?.author?.avatar[0]?.url}
                 />
               </div>
             </div>

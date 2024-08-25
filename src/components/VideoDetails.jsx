@@ -50,6 +50,7 @@ const VideoDetails = () => {
               width="100%"
               height="100%"
               style={{ backgroundColor: "#000000" }}
+              playing={true}
             />
           </div>
           <div className="text-white font-bold text-sm md:text-md mt-4 line-clamp-2 ">
